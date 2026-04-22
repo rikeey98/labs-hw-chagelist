@@ -14,3 +14,26 @@ html, body, #root {
 button {
   font-family: inherit;
 }
+
+/* macOS는 기본 오버레이 스크롤바라 가로 스크롤이 있어도 안 보여서
+   사용자가 "스크롤 안됨"처럼 느끼는 경우가 있음. 항상 노출되는
+   슬림 스크롤바로 대체. */
+.swimlane-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #C1C7D0 transparent;
+}
+.swimlane-scroll::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+.swimlane-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.swimlane-scroll::-webkit-scrollbar-thumb {
+  background: #C1C7D0;
+  border-radius: 5px;
+  border: 2px solid #F4F5F7;
+}
+.swimlane-scroll::-webkit-scrollbar-thumb:hover {
+  background: #8993A4;
+}

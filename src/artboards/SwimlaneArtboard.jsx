@@ -36,7 +36,7 @@ export default function SwimlaneArtboard() {
   const leftGutter = 140;
 
   return (
-    <div style={{ width: '100%', height: '100%', background: JIRA.bg, fontFamily: JIRA.font, color: JIRA.text, display: 'flex', flexDirection: 'column' }}>
+    <div style={{ width: '100%', height: '100%', minWidth: 0, background: JIRA.bg, fontFamily: JIRA.font, color: JIRA.text, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
       <div style={{ padding: '20px 28px 14px', borderBottom: `1px solid ${JIRA.border}`, background: '#fff' }}>
         <div style={{ display: 'flex', alignItems: 'baseline', gap: 10, marginBottom: 4 }}>
           <span style={{ fontSize: 11, color: JIRA.textSub, fontWeight: 600, letterSpacing: 0.4 }}>SOCSW · HW GUIDE WORKFLOW</span>
@@ -56,7 +56,7 @@ export default function SwimlaneArtboard() {
         ))}
       </div>
 
-      <div style={{ flex: 1, padding: 28, overflow: 'auto' }}>
+      <div className="swimlane-scroll" style={{ flex: 1, minWidth: 0, minHeight: 0, padding: 28, overflowX: 'auto', overflowY: 'auto' }}>
         <div style={{ position: 'relative', width: leftGutter + colW * 8 + 20, minHeight: laneH * 4 + 60 }}>
           <div style={{ display: 'flex', marginLeft: leftGutter, marginBottom: 14 }}>
             {STATUS_FLOW.map((status) => (

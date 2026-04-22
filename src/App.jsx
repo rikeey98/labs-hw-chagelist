@@ -62,7 +62,7 @@ export default function App() {
           })}
         </nav>
       </header>
-      <main style={{ flex: 1, minHeight: 0, background: JIRA.bg }}>
+      <main style={{ flex: 1, minHeight: 0, minWidth: 0, overflow: 'hidden', background: JIRA.bg }}>
         <Active />
       </main>
     </div>
